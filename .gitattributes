@@ -1,0 +1,12 @@
+* text eol=lf
+
+*.png binary
+*.jpg binary
+
+*.min.js -diff
+*.ps -diff
+*.map -diff
+dist/*.js -diff
+
+*.min.js merge=ours
+*.js.map merge=ours

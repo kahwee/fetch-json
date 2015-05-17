@@ -4,7 +4,7 @@ Wrapper around fetch specific for JSON.
 
 ## Example usage
 
-```
+```js
 var postJSON = require('fetch-json/post');
 postJSON('/api/login', {
   body: {

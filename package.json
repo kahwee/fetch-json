@@ -1,6 +1,6 @@
 {
   "name": "fetch-json",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kahwee/fetch-json/issues"
   },
-  "homepage": "https://github.com/kahwee/fetch-json"
+  "homepage": "https://github.com/kahwee/fetch-json",
+  "dependencies": {
+    "object-assign": "^2.0.0"
+  }
 }

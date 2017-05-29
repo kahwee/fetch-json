@@ -1,5 +1,7 @@
 ## fetch-json
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kahwee/fetch-json.svg)](https://greenkeeper.io/)
+
 Wrapper around fetch specific for JSON.
 
 ## `fetch-json/post`

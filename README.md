@@ -1,29 +1,30 @@
-## fetch-json
+# fetch-json
 
-Wrapper around fetch specific for JSON.
+Small CommonJS helpers for fetching JSON and posting JSON bodies through the
+browser Fetch API.
 
-## `fetch-json/post`
+## Install
 
-This function use Fetch API and adds in the relevant JSON headers for you:
-
-```  
-method: 'post',
-  headers: {
-    Accept: 'application/json',
-    'Content-Type': 'application/json'
-  }
+```sh
+npm install fetch-json
 ```
 
-## Example usage
+## Use
 
 ```js
-var postJSON = require('fetch-json/post');
-postJSON('/api/login', {
-  body: {
-    username: 'kahwee',
-    password: '!password1'
-  }
-}).then(function(data) {
-  console.log(data, 'done');
-});
+const getJSON = require('fetch-json/get')
+const postJSON = require('fetch-json/post')
+
+getJSON('/api/profile').then(profile => console.log(profile))
+postJSON('/api/login', { body: { username: 'demo', password: 'example' } })
+  .then(response => response.json())
+  .then(data => console.log(data))
 ```
+
+`get` parses the response as JSON. `post` serializes non-string bodies and
+sets POST/JSON headers, but returns the Fetch `Response`; call `.json()`
+explicitly. Neither helper rejects a response solely for an HTTP error status.
+
+The root export is `{ get, post }` and expects `window.fetch`. Use a browser
+bundle or a compatible environment. There is no implemented test suite:
+`npm test` is a failing placeholder. See [get.js](get.js) and [post.js](post.js).

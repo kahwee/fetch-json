@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/kahwee/fetch-json",
   "dependencies": {
-    "object-assign": "^2.0.0"
+    "object-assign": "^4.1.1"
   }
 }
